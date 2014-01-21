@@ -7,16 +7,20 @@ using namespace std;
 
 class Student {
 public:
+    //declaring a static int variable numberOfStudents
+    static int numberOfStudents;
+    
+    //constuctors
     Student();
     Student(string,string,int);
     
-    static int numberOfStudents;
-    
+    //public member functions
     void setall(string,string,int);
     int getID();
     string getName();
     
 private:
+    //private member attributes
     int ID;
     string fName, lName;
 };
