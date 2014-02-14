@@ -5,23 +5,28 @@
 #include <string>
 using namespace std;
 
-class Student {
-public:
-    //declaring a static int variable numberOfStudents
-    static int numberOfStudents;
-    
-    //constuctors
-    Student();
-    Student(string,string,int);
-    
-    //public member functions
-    void setall(string,string,int);
-    int getID();
-    string getName();
-    
-private:
-    //private member attributes
-    int ID;
-    string fName, lName;
-};
+namespace College {
+    class Student {
+    public:
+        //declaring a static int variable numberOfStudents
+        static int numberOfStudents;
+        
+        //constuctors
+        Student();
+        Student(string _first_name,string _last_name,int _student_ID);
+        
+        //deconstructor
+        virtual ~Student();
+        
+        //public member functions
+        void setall(string _first_name,string _last_name,int _student_ID);
+        int getID() const;
+        virtual string getInfo() const;
+        
+    private:
+        //private member attributes
+        int ID;
+        string firstName, lastName;
+    };
+}
 #endif

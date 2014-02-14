@@ -1,19 +1,27 @@
 #include <iostream> 
 #include <string> 
 #include "Student.h"
+#include "UndergradStudent.h"
+#include "GradStudent.h"
+#include "OperationOverloading.h"
 using namespace std;
+using namespace College;
 
 int main() {
-    //declaring and defining 4 student object
-    Student st1("Hakan", "Haberdar", 1234), st2("Charu", "Hans", 2345),
-            st3("Tarikul", "Islam", 5442), st4;
+    Student *list[3];
+    list[0] = new Student("Ashley","Baily",1000);
+    list[1] = new GradStudent("Carol","David",1001,'D',"Liberal Art");
+    list[2] = new UndergradStudent("Esther","Green",1002,2);
     
-    //printing ID and Names of each student object
-    cout << "We created " << Student::numberOfStudents << " student objects." << endl;
-    cout << st1.getID() << " " << st1.getName() << endl;
-    cout << st2.getID() << " " << st2.getName() << endl;
-    cout << st3.getID() << " " << st3.getName() << endl;
-    cout << st4.getID() << " " << st4.getName() << endl;
+    cout << "Student getInfo()" << endl;
+    cout << list[0]->getInfo() << endl;
+    cout << list[1]->Student::getInfo() << endl;
+    cout << list[2]->Student::getInfo() << endl;
     
+    cout << "\nRedefined getInfo()" << endl;
+    cout << list[1]->getInfo() << endl;
+    cout << list[2]->getInfo() << endl;
+
+
     return 0;
 }
