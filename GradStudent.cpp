@@ -1,6 +1,7 @@
 #include "GradStudent.h"
 
 namespace College {
+    //constructor
     GradStudent::GradStudent():Student() {
         //blank
     }
@@ -10,10 +11,12 @@ namespace College {
         setBachelorDegree(_bachelorDegree);
     }
     
+    //destructor
     GradStudent::~GradStudent() {
         //blank
     }
     
+    //check to make sure the choice enter is M or D, if not M is the default
     void GradStudent::setAcademicDegree(char _academicDegree) {
         if(_academicDegree == 'M' || _academicDegree == 'm' || _academicDegree == 'D' || _academicDegree == 'd')
             academicDegree = _academicDegree;
@@ -21,10 +24,12 @@ namespace College {
             academicDegree = 'M';
     }
     
+    //setter function
     void GradStudent::setBachelorDegree(string _bachelorDegree) {
         bachelorDegree = _bachelorDegree;
     }
     
+    //getter function
     char GradStudent::getAcademicDegree() const {
         return academicDegree;
     }
@@ -33,6 +38,7 @@ namespace College {
         return bachelorDegree;
     }
     
+    //return the info in the following format: "id firstName lastName bachelorDegree academicDegree"
     string GradStudent::getInfo() const {
         return (Student::getInfo() + ' ' + getBachelorDegree() + ' ' + getAcademicDegree());
     }

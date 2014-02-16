@@ -1,6 +1,7 @@
 #include "UndergradStudent.h"
 
 namespace College {
+    //constructor
     UndergradStudent::UndergradStudent():Student() {
         //blank
     }
@@ -9,10 +10,12 @@ namespace College {
         setClassification(_classification);
     }
     
+    //destructor
     UndergradStudent::~UndergradStudent() {
         //blank
     }
     
+    //check to make sure the classification is in rage of 1 to 4, otherwise it is set to 1 (default)
     void UndergradStudent::setClassification(int _classification) {
         if(_classification >= 1 || _classification <= 4)
             classification = _classification;
@@ -20,14 +23,17 @@ namespace College {
             classification = 1;
     }
     
+    //getter
     int UndergradStudent::getClassification() const{
         return classification;
     }
     
+    //return info in the following format: "id firstName lastName classification"
     string UndergradStudent::getInfo() const {
         return (Student::getInfo() + ' ' + getClassman());
     }
     
+    //return classification in string
     string UndergradStudent::getClassman() const {
         switch (classification) {
             case 1:

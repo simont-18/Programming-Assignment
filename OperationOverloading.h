@@ -6,12 +6,15 @@
 #include "UndergradStudent.h"
 #include <iostream>
 
-namespace std {
+namespace College{
+    //overloading "<<" for GradStudent
     ostream& operator<<(ostream& out, GradStudent& obj)
     {
         out << obj.getInfo();
         return out;
     }
+    
+    //overloading "<<" for UndergradStudent
     ostream& operator<<(ostream& out, UndergradStudent& obj)
     {
         out << obj.getInfo();
