@@ -42,4 +42,10 @@ namespace College {
     string GradStudent::getInfo() const {
         return (Student::getInfo() + ' ' + getBachelorDegree() + ' ' + getAcademicDegree());
     }
+    
+    ostream& operator<<(ostream& out, GradStudent& obj)
+    {
+        out << obj.getInfo();
+        return out;
+    }
 }

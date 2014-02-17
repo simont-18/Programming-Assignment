@@ -6,7 +6,7 @@ namespace College {
     int Student::numberOfStudents = 0;
     
     //default constructor
-    Student::Student() {
+    Student::Student():ID(0) {
         numberOfStudents++;
     }
     
@@ -23,7 +23,7 @@ namespace College {
     //check variables conditions before assigning them to the private member attributes
     void Student::setall(string _first_name, string _last_name, int _student_ID) {
         if(_student_ID <= 0)
-            ID = 1;
+            ID = 0;
         else
             ID = _student_ID;
         firstName = _first_name;

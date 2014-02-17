@@ -53,4 +53,10 @@ namespace College {
                 break;
         }
     }
+    
+    ostream& operator<<(ostream& out, UndergradStudent& obj)
+    {
+        out << obj.getInfo();
+        return out;
+    }
 }

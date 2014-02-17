@@ -1,9 +1,10 @@
-#include <iostream> 
+//Name: Duy Ta
+//Peoplesoft #: 1225688
+#include <iostream>
 #include <string> 
 #include "Student.h"
 #include "UndergradStudent.h"
 #include "GradStudent.h"
-#include "OperationOverloading.h"
 using namespace std;
 using namespace College;
 
