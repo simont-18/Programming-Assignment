@@ -1,9 +1,0 @@
-a.In private inheritance, all members in base class become private in derived class; In a public inheritance, the subclass will inherit the pubic and protected data from the base (super) class and store it in the public space.
-
-b.If a call to the base class constructor wasn't call, then the compiler will call the default constructor of the base class.
-
-c.Two example of member functions that are not inherited by the derived class are setAcademicDegree() and setClassification().
-
-d.It is possible for a derived class to inherit more than one base class. Instead of the single inheritance like this - class Snake : public Animal, you can do multiple inheritance like this -class Snake : public Animal, public Drawing.
-
-e.Usually overloading an operator are place inside the class, but for i/o base operator overloading it is better to place it outside the class.
